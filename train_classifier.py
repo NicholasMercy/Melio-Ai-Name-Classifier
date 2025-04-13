@@ -28,10 +28,10 @@ y = le.fit_transform(df['label'])
 x= [nlp(name).vector for name in df['name']]
 
 #Split the data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
 model = LogisticRegression(max_iter=1000)
-model.fit(X_train, y_train)
+model.fit(x_train, y_train)
 
 os.makedirs('models', exist_ok=True)
 
