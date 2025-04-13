@@ -1,29 +1,16 @@
+import spacy 
+#load the spacy model
+nlp = spacy.load("en_core_web_sm")
+
 def classify_name(name):
-    name = name.lower()
-
-    if any(keyword in name for keyword in ["university", "college", "institute", "school"]):
-        return "University"
-
-    elif any(keyword in name for keyword in ["inc", "ltd", "llc", "corp", "technologies", "solutions"]):
-        return "Company"
-
-    else:
-        return "Person"
-
+    
+    names = ["Nick", "Ryan", "John"]
+    for name in names:
+        doc = nlp(name)
+        print(name, [(ent.text, ent.label_) for ent in doc.ents])
 
 if __name__ == "__main__":
-    test_names = [
-        "Harvard University",
-        "Google Inc",
-        "Jane Doe",
-        "Amazon LLC",
-        "Stanford",
-        "Dr. Emily Clark",
-        "Tech Solutions Ltd",
-        "Oxford College",
-        "Michael Jordan"
-    ]
-
-    for name in test_names:
-        label = classify_name(name)
-        print(f"{name} → {label}")
+    classify_name("Nick")
+    classify_name("Ryan")
+    classify_name("John")
+    
