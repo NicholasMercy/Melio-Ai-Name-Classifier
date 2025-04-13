@@ -61,7 +61,7 @@
 
 ## Hour 3 - start 20:31 - 9:31
 
-### 🎯 Goal
+### 🎯 Initial Goal
 - Deploy the trained ML classifier into production using the API
 
 ### 📝 Session Highlights
@@ -84,7 +84,22 @@
 
 ---
 
-## Hour 4 - 10:15
+## Hour 4 - 10:15 - 11:15
+
+### 📝 Session Highlights
+1.Really struggled with getting docker and Kevs working due to weird errors specifically parameter inputs into the predictions and preprocessors
+2.Rebuilding docker and fixing docker took a while so a lot of waiting time for retesting 
+3.Small issues popped up and terminal testing was not very good so did postman 
+4.Postman led me with help of AI to realise problem was  def predict(self, data: np.ndarray, headers: dict = None, **kwargs) line, and preprocess, i was missing the headers: dict = None, it was not on the site so I struggled to figure out what was the problem, my fault
+5.Docker management was a struggle for me but managed to pull through
+
+**Assumptions**  
+1. I assumed the last part would be easier because my code worked but not in the production area.
+2. I assumed the build of docker would be quicker
+3. I assumed the testing process will be simpler, but next time I will introduce better error handling
+
+***Final Thoughts***
+After 4 hours I was only able to make to the docker zone, but I am going to continue and finish up because it was really fun and interesting, I am pretty new to some of these concepts but I feel after a project like this, I feel more comfortable to possibly to take more complex projects whilst I continue to study and work on other projects.
 
 ### 🎯 Goals
 - Finalize production deployment
