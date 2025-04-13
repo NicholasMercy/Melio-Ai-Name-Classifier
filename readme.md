@@ -48,7 +48,7 @@
 -Send to Melio AI
 ---
 
-## Hour 3
+## Hour 3 - start 20:31
 
 ### 🎯 Goal
 - Deploy the trained ML classifier into production using the API

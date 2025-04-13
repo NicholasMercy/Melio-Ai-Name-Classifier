@@ -33,10 +33,10 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_
 model = LogisticRegression(max_iter=1000)
 model.fit(x_train, y_train)
 
-os.makedirs('models', exist_ok=True)
+os.makedirs('saved_models', exist_ok=True)
 
-joblib.dump(model, 'models/name_classifier.pkl')
-joblib.dump(le, 'models/label_encoder.pkl')
+joblib.dump(model, 'saved_models/name_classifier.pkl')
+joblib.dump(le, 'saved_models/label_encoder.pkl')
 
 print("✅ Model trained and saved from cleaned data!")
 
