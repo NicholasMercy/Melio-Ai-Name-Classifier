@@ -1,1 +1,6 @@
- 
+spacy==3.8.5
+joblib==1.4.2
+numpy==1.26.4
+scikit-learn==1.6.1
+kserve==0.10.1
+protobuf==3.20.3

@@ -1,0 +1,16 @@
+{
+    "inputs": [
+        {
+            "name": "input-0",
+            "shape": [
+                2
+            ],
+            "datatype": "BYTES",
+            "parameters": null,
+            "data": [
+                "John Smith",
+                "Maria Garcia"
+            ]
+        }
+    ]
+}

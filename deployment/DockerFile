@@ -1,5 +1,5 @@
 # Use Python 3.9 slim image
-FROM --platform=linux/amd64 python:3.9.18-slim
+FROM python:3.9.18-slim
 
 # Set the working directory in the container
 WORKDIR /app
@@ -12,19 +12,19 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Dependencies
-COPY ./serve-requirements.txt .
+COPY serve-requirements.txt .
 RUN pip install --no-cache-dir -r serve-requirements.txt
 
 # Download spaCy model
 RUN python -m spacy download en_core_web_md
 
 # Make custom src code visible
-COPY ./src /app/src
+COPY ../src /app/src
 ENV PYTHONPATH "${PYTHONPATH}:/app"
 
-# Trained model and definition with main script
-COPY ./saved_model /app/models
-COPY ./main.py /app/main.py
+# Copy trained model and definition with main script
+COPY ../saved_models /app/saved_models
+COPY main.py /app/main.py
 
 # Expose the port that KServe will use
 EXPOSE 8080
