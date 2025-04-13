@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-
 def classify_name(name: str) -> str:
     name = name.lower()
 
