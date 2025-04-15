@@ -107,6 +107,29 @@ After 4 hours I was only able to make to the docker zone, but I am going to cont
 
 ---
 
+## Final 30 mins - 22:00 - 22:30
+### 📝 Session Highlight
+1. Discovered issue with docker config needed to be adjusted manually.
+2. Managed to publish and push successfully
+3. Deployment and use case was succesful!
+4. Tested and working
+
+**Assumptions** 
+1. Had the assumption it will be more complicated to test, fortunately it was simple and clear
+
+***Final Thoughts after deployment and evaluation***
+
+Here are a few problems and optimization I see within my project. 
+-My project does not need to return so many fields back
+-My project can be optimized better with possibliy another model 
+-A token in header is required for security reasons
+-Duplicate files - (from testing)
+-Potential version upgrades
+-Code clean up where necessary
+
+*Optional Improvments*
+1. Training api for better model improvement?
+
 ## ⚙️ Environment Setup
 
 ### 🐍 Python Version
