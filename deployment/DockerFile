@@ -18,12 +18,8 @@ RUN pip install --no-cache-dir -r serve-requirements.txt
 # Download spaCy model
 RUN python -m spacy download en_core_web_md
 
-# Make custom src code visible
-COPY ../src /app/src
-ENV PYTHONPATH "${PYTHONPATH}:/app"
-
 # Copy trained model and definition with main script
-COPY ../saved_models /app/saved_models
+COPY saved_models /app/saved_models
 COPY main.py /app/main.py
 
 # Expose the port that KServe will use
